@@ -1,0 +1,48 @@
+@StudentManagementAPI_HostAddress = https://localhost:5001
+
+### GET All Students
+GET {{StudentManagementAPI_HostAddress}}/api/Students
+Accept: application/json
+
+###
+
+### GET Student by ID
+GET {{StudentManagementAPI_HostAddress}}/api/Students/1
+Accept: application/json
+
+###
+
+### POST Create New Student
+POST {{StudentManagementAPI_HostAddress}}/api/Students
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "jane.doe@marwadiuniversity.ac.in",
+  "department": "Computer Science and Engineering",
+  "semester": 4,
+  "cgpa": 9.20
+}
+
+###
+
+### PUT Update Student
+PUT {{StudentManagementAPI_HostAddress}}/api/Students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Madhusudhan J",
+  "email": "madhusudan.j.133659@marwadiiuniversity.ac.in",
+  "department": "Artificial Intelligence & Data Science",
+  "semester": 6,
+  "cgpa": 9.60
+}
+
+###
+
+### DELETE Student
+DELETE {{StudentManagementAPI_HostAddress}}/api/Students/3
+Accept: application/json
+
+###
